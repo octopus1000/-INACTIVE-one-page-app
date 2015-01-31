@@ -1,0 +1,113 @@
+#lift{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	perspective:400px;/*bigger into the screen*/
+	transition:1s;
+}
+#lift:lang(turn){
+	perspective:100px;
+}
+/*LIFT TOP AND BOTTOM*/
+#lift_top,#lift_bottom{
+	height: 100px;/*should be a percentage*/
+	width: 100%;
+	position: fixed;
+	z-index: 3;
+}
+#lift_top{
+	top: -50px;/*rotate around the center*/
+	background-image:url(../img/noise.png),linear-gradient(to bottom,#c5e3f2,#78919d);
+	transform:rotateX(-90deg);
+}
+#lift_bottom{
+	bottom: -50px;
+	background-image:url(../img/noise.png),linear-gradient(to top,#c5e3f2,#78919d);
+	transform:rotateX(90deg);
+}
+/*LIFT LEFT AND RIGHT*/
+#lift_left,#lift_right{
+	height: 100%;
+	width: 100px;/*should be a percentage*/
+	position: fixed;
+	z-index: 3;
+}
+#lift_left{
+	left: -50px;
+	background-image:url(../img/noise.png), linear-gradient(to right,#c5e3f2,#78919d);
+	transform:rotateY(90deg);
+}
+#lift_right{
+	right: -50px;
+	background-image:url(../img/noise.png), linear-gradient(to left, #c5e3f2,#78919d);
+	transform:rotateY(-90deg);
+}
+/*LIFT LEFT, RIGHT AND TOP BAR*/
+#lift_left_bar,#lift_right_bar,#lift_top_bar{
+	width: 10%;
+	height: 90%;
+	top: 10%;
+	background:url(../img/noise.png) #78919d;
+	transform:translate3d(0, 0, -50px);
+	position: fixed;
+	z-index: 2;
+}
+#lift_right_bar{
+	right: 0;
+}
+#lift_top_bar{
+	height: 10%;
+	top:0;
+	width: 100%;
+	z-index: 3;
+}
+/*LIFT LEFT AND RIGHT DOOR*/
+#lift_door_left,#lift_door_right{
+	background:url(../img/noise.png), #78919d;
+	width: 40%;
+	height: 90%;
+	top: 10%;
+	position: fixed;
+	transition: 1s;
+}
+#lift_door_left{
+	left: 10%;
+}
+#lift_door_left:lang(open){
+	left: -40%;
+}
+#lift_door_right{
+	right: 10%;
+}
+#lift_door_right:lang(open){
+	right: -40%;
+}
+
+
+/*none structure css*/
+.border_groove{
+		border: groove 3px #618da3;
+		margin: -3px;
+}
+
+/*-------content information---------*/
+#indicator{
+	height: 1em;
+	width: 6em;
+	padding: .5em;
+	margin: auto;
+	background: black;
+	text-align: center;
+	text-transform: uppercase;
+	color:red;
+	letter-spacing: .5em;
+}
+/*main is now for test, no actual meaning*/
+main{
+	height: 100%;
+	width: 100%;
+	background: url("../img/test.jpg");
+	position: fixed;
+	z-index: 0;
+}
