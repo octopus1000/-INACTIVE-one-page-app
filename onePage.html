@@ -1,31 +1,63 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="./css/settings.css">
 	<link rel="stylesheet" type="text/css" href="./css/lift.css">
+	<link rel="stylesheet" type="text/css" href="./css/content.css">
+	<link rel="stylesheet" type="text/css" href="./css/slide.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src = "./js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src = "./js/draw.js"></script>
 	<script type="text/javascript" src = "./js/control.js"></script>
+	<script type="text/javascript" src = "./js/slide.js"></script>
 </head>
 <body>
-	<div id = "lift">
-		<div id = "lift_top"  class = "border_groove"></div>
-		<div id = "lift_bottom" class = "border_groove"></div>
-		<div id = "lift_left" class = "border_groove"></div>
-		<div id = "lift_right" class = "border_groove"></div>
-		<div id = "lift_top_bar" class = "border_groove">
-			<div id = "indicator"><span>about</span></div>
+	<canvas id = "lift">
+	</canvas>
+	<div id = "lift_front">
+		<div id = "lift_bar_top" class = "border">
+			<div id = "indicator">about</div>
 		</div>
-		<div id = "lift_left_bar" class = "border_groove"></div>
-		<div id = "lift_right_bar" class = "border_groove">
+		<div id = "lift_bar_left" class = "border"></div>
+		<div id = "lift_bar_right" class = "border">
 			<div id = "panel">
-				<button id = "btn_open">open</button>
-				<button id = "btn_close">close</button>
-				<button id = "btn_turn">turn</button>
+				<nav>
+					<a class = "btn_floor" href = "#">1</a>
+					<a class = "btn_floor" href = "#">2</a>
+					<a class = "btn_floor" href = "#">3</a>
+					<a class = "btn_floor" href = "#">4</a>
+				</nav>
+				<a id = "btn_open">&lt;&gt;</a>
+				<a id = "btn_close">&gt;&lt;</a>
 			</div>
 		</div>
-		<div id = "lift_door_left" lang = "close" class = "border_groove"></div>
-		<div id = "lift_door_right" class = "border_groove"></div>
+		<div id = "content_wrapper">
+		<div  class = "content" id = "about">
+			<img id = "figure1" src = "img/figure1.png"></img>
+		</div>
+		<div  class = "content" id = "skill">
+			<img id = "figure2" src = "img/figure2.png"></img>
+			<span>cpp</span>
+			<span>html</span>
+		</div>
+		<div class = "content" id = "tech">
+			<section>
+				<h2>How this app come out?</h2>
+			</section>
+			<section><p>I sleep in the bed and find<p>
+			</section>
+			<section><p>I sleep in the bed and find<p>
+			</section>
+		</div>
+		<div class = "content" id = "foo">
+			<p>I am a strong believer that the future world will be dominated by mobile devices, and web app will be more popular than ever. Cool features added to HTML5 and CSS3 bring efficiency and infinite possibilities. With media queries, I can adjust display with minor changes. When it comes to javascript, it is really easy to use, much easy than c++. With all these cool techniques, I can even make real time 3D rendering using merely a browser.</p>
+		</div>
 	</div>
-	<main></main>
+	<div id = "lift_door_left" class = "border"></div>
+	<div id = "lift_door_right" class = "border"></div>
+	</div>
+
+	
 </body>
 </html>

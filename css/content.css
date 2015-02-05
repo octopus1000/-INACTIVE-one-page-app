@@ -1,0 +1,84 @@
+
+/*-------content information---------*/
+/*main is now for test, no actual meaning*/
+#content_wrapper{
+}
+.content{
+	width: 80%;
+	height: 90%;
+	top:10%;
+	left: 10%;
+	position: absolute;
+}
+
+
+/*about div*/
+#about{
+	background: url("../img/classroom.png") no-repeat 50% 100%;
+}
+#figure1{
+	position: absolute;
+	left: -70%;
+	bottom: 10%;
+	max-width: 70%;
+	max-height: 70%;
+	transition:1s;
+}
+
+
+/*skill div*/
+#skill{
+	color:white;
+	font: 4em 'Indie Flower', cursive;
+	background: url("../img/workroom.png") no-repeat 50% 100%;
+}
+#skill span{
+	position: absolute;
+	z-index: 2;
+}
+#figure2{
+	position: absolute;
+	max-width: 100%;
+	max-height: 100%;
+	left: 30%;
+	bottom:-100%;
+	transition:1s;
+}
+
+/*tech div*/
+#tech{
+	perspective:300px;
+	background: url(../img/noise.png) #D25E57;
+}
+
+#foo{
+	padding: 4em;
+	box-sizing:border-box;
+	overflow: auto;
+	font: 1.2em helvetica, sans-serif;
+}
+/*panel*/
+#btn_open,#btn_close{
+	display: block;
+	float: left;
+	width: 50%;
+	color:white;
+	padding: .5em;
+	background: white;
+	color: black;
+	box-sizing:border-box;
+}
+nav .btn_floor{
+	display: block;
+	text-decoration: none;
+	background: white;
+	margin-bottom: 1em;
+}
+
+
+.content{
+	display: none;
+}
+.content:first-child{
+	display: block;
+}

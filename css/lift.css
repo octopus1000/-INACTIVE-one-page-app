@@ -1,113 +1,79 @@
+/*outside apperance*/
 #lift{
 	position: fixed;
 	height: 100%;
 	width: 100%;
-	z-index: 1;
-	perspective:400px;/*bigger into the screen*/
-	transition:1s;
 }
-#lift:lang(turn){
-	perspective:100px;
+
+#lift_front{
+	position: fixed;
+	width: calc(100% - 2*5%);
+	height: calc(100% - 2*5%);
+	top: 5%;
+	left: 5%;
+	overflow: hidden;
 }
-/*LIFT TOP AND BOTTOM*/
-#lift_top,#lift_bottom{
-	height: 100px;/*should be a percentage*/
+#lift_bar_top,#lift_bar_left,#lift_bar_right{
+	position: absolute;
+	z-index: 10;
+	background:url(../img/noise.png), #576d7c;
+}
+
+#lift_bar_top{
 	width: 100%;
-	position: fixed;
-	z-index: 3;
-}
-#lift_top{
-	top: -50px;/*rotate around the center*/
-	background-image:url(../img/noise.png),linear-gradient(to bottom,#c5e3f2,#78919d);
-	transform:rotateX(-90deg);
-}
-#lift_bottom{
-	bottom: -50px;
-	background-image:url(../img/noise.png),linear-gradient(to top,#c5e3f2,#78919d);
-	transform:rotateX(90deg);
-}
-/*LIFT LEFT AND RIGHT*/
-#lift_left,#lift_right{
-	height: 100%;
-	width: 100px;/*should be a percentage*/
-	position: fixed;
-	z-index: 3;
-}
-#lift_left{
-	left: -50px;
-	background-image:url(../img/noise.png), linear-gradient(to right,#c5e3f2,#78919d);
-	transform:rotateY(90deg);
-}
-#lift_right{
-	right: -50px;
-	background-image:url(../img/noise.png), linear-gradient(to left, #c5e3f2,#78919d);
-	transform:rotateY(-90deg);
-}
-/*LIFT LEFT, RIGHT AND TOP BAR*/
-#lift_left_bar,#lift_right_bar,#lift_top_bar{
-	width: 10%;
-	height: 90%;
-	top: 10%;
-	background:url(../img/noise.png) #78919d;
-	transform:translate3d(0, 0, -50px);
-	position: fixed;
-	z-index: 2;
-}
-#lift_right_bar{
-	right: 0;
-}
-#lift_top_bar{
 	height: 10%;
-	top:0;
-	width: 100%;
-	z-index: 3;
+}
+
+#lift_bar_left,#lift_bar_right{
+	width: 10%;
+	height: calc(100% - 10%);
+	top: 10%;
+}
+#lift_bar_right{
+	right:0;
 }
 /*LIFT LEFT AND RIGHT DOOR*/
 #lift_door_left,#lift_door_right{
-	background:url(../img/noise.png), #78919d;
-	width: 40%;
-	height: 90%;
-	top: 10%;
-	position: fixed;
+	background:url(../img/noise.png), #576d7c;
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	z-index: 5;
 	transition: 1s;
 }
 #lift_door_left{
-	left: 10%;
-}
-#lift_door_left:lang(open){
-	left: -40%;
-}
-#lift_door_right{
-	right: 10%;
-}
-#lift_door_right:lang(open){
-	right: -40%;
+	left: 0;
 }
 
+#lift_door_right{
+	right: 0;
+}
 
 /*none structure css*/
-.border_groove{
-		border: groove 3px #618da3;
-		margin: -3px;
+.border{
+		border: outset   #35647c;
+		box-sizing:border-box;
 }
 
-/*-------content information---------*/
+
+/*parts*/
 #indicator{
 	height: 1em;
-	width: 6em;
+	width: 10em;
 	padding: .5em;
 	margin: auto;
-	background: black;
+	background: rgb(12, 42, 61);
 	text-align: center;
 	text-transform: uppercase;
 	color:red;
 	letter-spacing: .5em;
 }
-/*main is now for test, no actual meaning*/
-main{
-	height: 100%;
-	width: 100%;
-	background: url("../img/test.jpg");
-	position: fixed;
-	z-index: 0;
+
+#panel{
+	background: rgb(12, 42, 61);
+	width: 80%;
+	margin:6em auto 0 auto;
+	padding: 1em;
+	box-sizing:border-box;
+	text-align: center;
 }
