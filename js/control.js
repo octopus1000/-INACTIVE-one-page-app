@@ -89,7 +89,7 @@ function panelControl(e){
 		setTimeout(function(){//stay while the elevator is moving;
 			$("#btn_open").click();
 			$(".btn_floor").click(panelControl);
-			$("#indicator").removeClass("flickering");
+			$("#indicator").removeClass("flickering").text("floor " + whichBlock);
 		},1000);
 	}, 1000);
 }

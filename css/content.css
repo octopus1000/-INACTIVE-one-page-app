@@ -59,29 +59,19 @@
 }
 
 /*tech div*/
+
 #tech{
 	perspective:300px;
+	text-shadow:1px 1px 0px rgba(255,255,255,.3);
 	background: url(../img/noise.png) #D25E57;
+}
+#tech p{
+	text-align: left;
+	margin: 1em 4em;
 }
 
 #foo{
-	background:
-	linear-gradient(
-		limegreen,
-		transparent
-		),
-	linear-gradient(
-		90deg,
-		skyblue,
-		transparent
-		),
-	linear-gradient(
-		-90deg,
-		coral,
-		transparent
-		);
-	
-	background-blend-mode: screen;
+	 background:linear-gradient(to top, #ECE9E6 10%, #FFFFFF 90%);
 	padding: 4em;
 	box-sizing:border-box;
 	overflow: auto;
