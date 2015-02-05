@@ -40,3 +40,8 @@ function slideNext(){
 function addCtrBar(elem){
 	$("<a id = 'slide_ctrb_left' href = '#'></a><a id = 'slide_ctrb_right' href = '#'></a>").appendTo(elem);
 }
+
+
+function initSticker(elem){
+
+}

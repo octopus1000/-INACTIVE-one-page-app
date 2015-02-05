@@ -2,62 +2,95 @@
 <html>
 <head>
 	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="./css/settings.css">
 	<link rel="stylesheet" type="text/css" href="./css/lift.css">
 	<link rel="stylesheet" type="text/css" href="./css/content.css">
 	<link rel="stylesheet" type="text/css" href="./css/slide.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-	<script type="text/javascript" src = "./js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src = "./js/draw.js"></script>
 	<script type="text/javascript" src = "./js/control.js"></script>
 	<script type="text/javascript" src = "./js/slide.js"></script>
+	<script type="text/javascript" src="http://leaverou.github.com/prefixfree/prefixfree.min.js"></script>
 </head>
 <body>
 	<canvas id = "lift">
 	</canvas>
 	<div id = "lift_front">
 		<div id = "lift_bar_top" class = "border">
-			<div id = "indicator">about</div>
+			<div id = "indicator">floor 1</div>
 		</div>
 		<div id = "lift_bar_left" class = "border"></div>
 		<div id = "lift_bar_right" class = "border">
 			<div id = "panel">
 				<nav>
-					<a class = "btn_floor" href = "#">1</a>
-					<a class = "btn_floor" href = "#">2</a>
-					<a class = "btn_floor" href = "#">3</a>
-					<a class = "btn_floor" href = "#">4</a>
+					<a class = "btn_floor" href = "#"></a>
+					<a class = "btn_floor" href = "#"></a>
+					<a class = "btn_floor" href = "#"></a>
+					<a class = "btn_floor" href = "#"></a>
 				</nav>
-				<a id = "btn_open">&lt;&gt;</a>
-				<a id = "btn_close">&gt;&lt;</a>
+				<a id = "btn_open" href = "#"></a>
+				<a id = "btn_close" href = "#"></a>
 			</div>
 		</div>
 		<div id = "content_wrapper">
 		<div  class = "content" id = "about">
 			<img id = "figure1" src = "img/figure1.png"></img>
+			<p id = "intro">I am a currently enrolled USC grad, majoring in Computer Science. There are two areas interest me a lot. Computer Graphics and front-end development(It is cool to apply CG in front-end development).I love playing mobile games and try new apps.
+			</p>
 		</div>
 		<div  class = "content" id = "skill">
 			<img id = "figure2" src = "img/figure2.png"></img>
-			<span>cpp</span>
-			<span>html</span>
+			<section>
+				<h2>C++</h2>
+				<p>
+					This is the first language I learnt, I wrote quite a few programs in c++, formed coding habbits,learnt debugging techniques using it.
+				</p>
+			</section>
+			<section>
+				<h2>html + CSS</h2>
+				<p>
+					In the past, I used to wrote all the things in a html file, but not today.
+				</p>
+			</section>
+			<section>
+				<h2>Javascript</h2>
+				<p>
+					In the past, I used to wrote all the things in a html file, but not today.
+				</p>
+			</section>
+			<section>
+				<h2>Other</h2>
+				<p>
+					I've tried java and c# in projects, but not familiar with them.
+				</p>
+			</section>
 		</div>
 		<div class = "content" id = "tech">
 			<section>
 				<h2>How this app come out?</h2>
 			</section>
-			<section><p>I sleep in the bed and find<p>
+			<section>
+				<h2>Frameworks?</h2>
+				<p>Other issues?<p>
 			</section>
-			<section><p>I sleep in the bed and find<p>
+			<section>
+				<h2>Libraries and Plugins?</h2>
+				<p>I sleep in the bed and find<p>
+			</section>
+			<section>
+				<h2>Other issues?</h2>
+				<p>I sleep in the bed and find<p>
 			</section>
 		</div>
+
 		<div class = "content" id = "foo">
+			<h2>Why I'am excited about being a front-end developer?</h2>
 			<p>I am a strong believer that the future world will be dominated by mobile devices, and web app will be more popular than ever. Cool features added to HTML5 and CSS3 bring efficiency and infinite possibilities. With media queries, I can adjust display with minor changes. When it comes to javascript, it is really easy to use, much easy than c++. With all these cool techniques, I can even make real time 3D rendering using merely a browser.</p>
 		</div>
 	</div>
 	<div id = "lift_door_left" class = "border"></div>
 	<div id = "lift_door_right" class = "border"></div>
 	</div>
-
-	
 </body>
 </html>

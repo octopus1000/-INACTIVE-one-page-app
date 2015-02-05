@@ -16,25 +16,37 @@
 #about{
 	background: url("../img/classroom.png") no-repeat 50% 100%;
 }
+#intro{
+	background: rgba(255,255,255,.8);
+	width: 30%;
+	position:absolute;
+	top: 40%;
+	max-height: 50%;
+	right: -30%;
+	padding: 1em;
+	box-sizing:border-box;
+	overflow: auto;
+	font:1em helvetica,sans-serif;
+	letter-spacing: .1em;
+	text-shadow:1px -1px 0  white;
+	border-radius: 5px;
+	transition:1s;
+	box-shadow: 0 0 0 5px rgba(0,0,0,.3);
+}
 #figure1{
 	position: absolute;
-	left: -70%;
+	right: 100%;
 	bottom: 10%;
 	max-width: 70%;
 	max-height: 70%;
 	transition:1s;
+	z-index: 1;
 }
 
 
 /*skill div*/
 #skill{
-	color:white;
-	font: 4em 'Indie Flower', cursive;
 	background: url("../img/workroom.png") no-repeat 50% 100%;
-}
-#skill span{
-	position: absolute;
-	z-index: 2;
 }
 #figure2{
 	position: absolute;
@@ -43,6 +55,7 @@
 	left: 30%;
 	bottom:-100%;
 	transition:1s;
+	z-index: 0;
 }
 
 /*tech div*/
@@ -52,33 +65,86 @@
 }
 
 #foo{
+	background:
+	linear-gradient(
+		limegreen,
+		transparent
+		),
+	linear-gradient(
+		90deg,
+		skyblue,
+		transparent
+		),
+	linear-gradient(
+		-90deg,
+		coral,
+		transparent
+		);
+	
+	background-blend-mode: screen;
 	padding: 4em;
 	box-sizing:border-box;
 	overflow: auto;
 	font: 1.2em helvetica, sans-serif;
 }
-/*panel*/
-#btn_open,#btn_close{
-	display: block;
-	float: left;
-	width: 50%;
-	color:white;
-	padding: .5em;
-	background: white;
-	color: black;
-	box-sizing:border-box;
+
+#foo h2{
+	font: 3em 'Indie Flower', cursive;
+	margin: 0 auto;
 }
-nav .btn_floor{
+/*panel*/
+
+nav{
+	text-align: center;
+	width: 100%;
+	margin-bottom: 1em;
+}
+nav .btn_floor,#btn_open,#btn_close{
 	display: block;
 	text-decoration: none;
 	background: white;
 	margin-bottom: 1em;
+	margin: auto;
+	padding: 0;
+	width: 32px;
+	height: 32px;
+	background: url(../img/btn_floor.png);
 }
 
+nav .btn_floor:hover, #btn_open:hover,#btn_close:hover{
+	background: url(../img/btn_floor_hover.png);
+}
 
+nav .btn_floor:nth-child(1),nav .btn_floor:nth-child(1):hover{
+	background-position: 0 0;
+}
+nav .btn_floor:nth-child(2),nav .btn_floor:nth-child(2):hover{
+	background-position: -32px 0;
+}
+nav .btn_floor:nth-child(3),nav .btn_floor:nth-child(3):hover{
+	background-position: -64px 0;
+	
+}
+nav .btn_floor:nth-child(4),nav .btn_floor:nth-child(4):hover{
+	background-position: -96px 0;
+}
+#btn_open,#btn_open:hover{
+	background-position: -128px 0;
+}
+#btn_close,#btn_close:hover{
+	background-position: -160px 0;
+}
 .content{
 	display: none;
 }
 .content:first-child{
 	display: block;
+}
+@keyframes flicker {
+    0%  {background: rgb(12, 42, 61);color:red;}
+    50%   {background: rgb(100,0,0);color:white;}
+    100%  {background: rgb(12, 42, 61);color:red;}
+}
+.flickering{
+	animation: flicker 2s  linear infinite;
 }

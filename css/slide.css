@@ -52,3 +52,30 @@
 #slide_ctrb_right::after{
 	content: ">";
 }
+
+
+/*stickers*/
+.sticker{
+	position: relative;
+	display: block;
+	padding: 1em;
+	margin: 1em;
+	width: 10em;
+	max-height: 12em;
+	background:rgba(255, 235, 102, 0.8);
+	box-shadow: 0 0 0 5px rgba(0,0,0,.2), 0 0 5px rgba(0,0,0,.5);
+	float: left;
+	z-index: 1;
+}
+.sticker:hover{
+	cursor: pointer;
+	box-shadow: 0 0 5px 10px rgba(219, 202, 91, 0.69);
+}
+.sticker h2{
+	font:1.5em 'Indie Flower', cursive;
+	margin: 0 auto;
+}
+.sticker p{
+	margin: 0 auto;
+	font:1em 'Indie Flower', cursive;
+}

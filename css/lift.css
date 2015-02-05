@@ -67,13 +67,15 @@
 	text-transform: uppercase;
 	color:red;
 	letter-spacing: .5em;
+	font: 1.2em 'Squada One', cursive; 
 }
 
 #panel{
 	background: rgb(12, 42, 61);
+	min-width: 32px;
 	width: 80%;
-	margin:6em auto 0 auto;
-	padding: 1em;
-	box-sizing:border-box;
 	text-align: center;
+	margin:6em auto;
+	padding: 1em 0;
+	box-sizing:border-box;
 }

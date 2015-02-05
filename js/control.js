@@ -11,16 +11,20 @@ function init(){
 	$("#btn_open").click(openDoor);
 	$(".btn_floor").click(panelControl);
 
+	//init printer effect
 	$("#foo p").data("text",$("#foo p").text());
 	$("#foo").click(function(){
 		clearInterval(pTimer);
 		$("#foo p").text($("#foo p").data("text"));
 	});
-	//$("#btn_open").click();
-	
-/*section */
-	$("section").addClass("slide");
+	//init slides
+	$("#tech section").addClass("slide");
 	slideInit($("#tech"));
+	//init stickers
+	$("#skill section").addClass("sticker");
+	initSticker($("#skill"));
+	//open the door
+	$("#btn_open").click();
 }
 
 function closeDoor(e){
@@ -30,10 +34,14 @@ function closeDoor(e){
 	$("#lift_door_right").attr("class","lift_door_right_close border");
 	switch(whichBlock){
 		case 1:
-		$("#figure1").css("left","-70%");
+		$("#figure1").css("right","100%");
+		$("#intro").css("left","100%");
 		break;
 		case 2:
 		$("#figure2").css("bottom","-100%");
+		break;
+		case 4:
+		clearInterval(pTimer);
 		break;
 
 	}
@@ -47,7 +55,8 @@ function openDoor(e){
 
 	switch(whichBlock){
 		case 1:
-		$("#figure1").css("left","30%");
+		$("#figure1").css("right","50%");
+		$("#intro").css("left","50%");
 		break;
 		case 2:
 		$("#figure2").css("bottom","0");
@@ -75,18 +84,19 @@ function panelControl(e){
 	setTimeout(function(){//stay while the door is closing
 		$(".content:nth-child("+ whichBlock + ")").hide();
 		whichBlock = nextBlock; 
-		$("#lift_front").effect("shake",{distance:4,times:20});
 		$(".content:nth-child("+ whichBlock + ")").show();
+		$("#indicator").addClass("flickering");
 		setTimeout(function(){//stay while the elevator is moving;
 			$("#btn_open").click();
 			$(".btn_floor").click(panelControl);
+			$("#indicator").removeClass("flickering");
 		},1000);
 	}, 1000);
 }
 
 
 function printer(elem){
-	var txt = elem.text();
+	var txt = elem.data("text");
 	elem.text("").show();
 	if(pTimer){
 		clearInterval(pTimer);
